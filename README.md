@@ -16,8 +16,9 @@ You can use a standard Play! Scala template like this one:
 }
 ```
 Check the below template list for more complex template design:
+
 1. [Letter PDF](https://github.com/knoldus/playing-pdf-module/blob/master/app/views/letter.scala.html)
-1. [News Letter PDF](https://github.com/knoldus/playing-pdf-module/blob/master/app/views/newsletter.scala.html) 
+2. [News Letter PDF](https://github.com/knoldus/playing-pdf-module/blob/master/app/views/newsletter.scala.html) 
 
 Then this template, after having imported ```it.innove.PdfGenerator```, can simply be rendered as:
 ``` scala
@@ -60,7 +61,9 @@ You can add your fonts with ```PdfGenerator.loadLocalFonts``` method, for exampl
 
 ```PdfGenerator.loadLocalFonts(new String[]{"fonts/FreeSans.ttf"})```
 
-![alt tag](/public/images/gravatar.png)
+![alt tag](/public/images/home.png)
+
+![alt tag](/public/images/letter.png)
 
 - Used [Play2-PDF Module](https://github.com/innoveit/play2-pdf) to generate PDF from HTML template
 - Embedded JS & CSS libraries with [WebJars](http://www.webjars.org/)
