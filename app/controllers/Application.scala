@@ -10,16 +10,31 @@ object Application extends Controller {
     s"http://${request.host}/"
   }
 
-  def index = Action { implicit request =>
-    Ok(PdfGenerator.toBytes(views.html.letter("Your new application is ready."), host)).as("application/pdf")
+  /**
+   * This action has been used to render home page of the application
+   *
+   * @return
+   */
+  def index: Action[AnyContent] = Action { implicit request =>
+    Ok(views.html.index("Play!ng PDF"))
   }
 
-  def letter = Action { implicit request =>
-    Ok(PdfGenerator.toBytes(views.html.letter("Your new application is ready."), host)).as("application/pdf")
+  /**
+   * This action has been used to generate example 1 pdf from the letter template
+   *
+   * @return
+   */
+  def letter: Action[AnyContent] = Action { implicit request =>
+    Ok(PdfGenerator.toBytes(views.html.letter("Play!ng PDF"), host)).as("application/pdf")
   }
 
-  def newsletter = Action { implicit request =>
-    Ok(PdfGenerator.toBytes(views.html.newsletter("Your new application is ready."), host)).as("application/pdf")
+  /**
+   * This action has been used to generate example 1 pdf from the newsletter template
+   *
+   * @return
+   */
+  def newsletter: Action[AnyContent] = Action { implicit request =>
+    Ok(PdfGenerator.toBytes(views.html.newsletter("Play!ng PDF"), host)).as("application/pdf")
   }
 
 }
